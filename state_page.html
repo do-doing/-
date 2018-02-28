@@ -54,31 +54,31 @@
               <a class="mui-control-item" href="#item3">媒體報道</a>
             </div>
           </div>
-          <div class="tab-content">
+          <div class="tab-content" id="aaa">
             <div id="item1" class="mui-control-content mui-active">
               <div class="page-title">重要公告</div>
               <div class="content-layout">
                 <div class="article">
                  
                   <div class="articleArea">
-                    <ul class="mui-table-view">
+                    <ul class="mui-table-view article-ul">
                       <li class="mui-table-view-cell">
                         <a class="mui-navigate-right" href="article.html">
-                          <p class="artcleList">小蠻腰科技大會即將隆重召開</p>
+                          <p class="artcleList">1小蠻腰科技大會即將隆重召開</p>
                         </a>
                       </li>
                       <li class="mui-table-view-cell">
                         <a class="mui-navigate-right" href="article.html">
-                          <p class="artcleList">協會組織前往台灣政治大學金融科技研究協會組織前往台灣政治大學金融科技研究</p>
+                          <p class="artcleList">1協會組織前往台灣政治大學金融科技研究協會組織前往台灣政治大學金融科技研究</p>
                         </a>
                       </li>
                       <li class="mui-table-view-cell">
                         <a class="mui-navigate-right" href="article.html">
-                          <p class="artcleList">天河区推动台湾大学生实习和台湾青年创新创业</p>
+                          <p class="artcleList">1天河区推动台湾大学生实习和台湾青年创新创业</p>
                         </a>
                       </li>
                     </ul>
-                    <a class="more-btn" href="news_page.html">查看更多</a>
+                    <a class="more-btn">查看更多</a>
                   </div>
                 </div>
               </div>
@@ -88,24 +88,24 @@
               <div class="content-layout">
                 <div class="article">
                   <div class="articleArea">
-                    <ul class="mui-table-view">
+                    <ul class="mui-table-view article-ul">
                       <li class="mui-table-view-cell">
                         <a class="mui-navigate-right" href="article.html">
-                          <p class="artcleList">小蠻腰科技大會即將隆重召開</p>
+                          <p class="artcleList">2小蠻腰科技大會即將隆重召開</p>
                         </a>
                       </li>
                       <li class="mui-table-view-cell">
                         <a class="mui-navigate-right" href="article.html">
-                          <p class="artcleList">協會組織前往台灣政治大學金融科技研究協會組織前往台灣政治大學金融科技研究</p>
+                          <p class="artcleList">2協會組織前往台灣政治大學金融科技研究協會組織前往台灣政治大學金融科技研究</p>
                         </a>
                       </li>
                       <li class="mui-table-view-cell">
                         <a class="mui-navigate-right" href="article.html">
-                          <p class="artcleList">天河区推动台湾大学生实习和台湾青年创新创业</p>
+                          <p class="artcleList">2天河区推动台湾大学生实习和台湾青年创新创业</p>
                         </a>
                       </li>
                     </ul>
-                    <a class="more-btn" href="news_page.html">查看更多</a>
+                    <a class="more-btn">查看更多</a>
                   </div>
                 </div>
               </div>
@@ -116,24 +116,24 @@
               <div class="content-layout">
                 <div class="article">
                   <div class="articleArea">
-                    <ul class="mui-table-view">
+                    <ul class="mui-table-view article-ul">
                       <li class="mui-table-view-cell">
                         <a class="mui-navigate-right" href="article.html">
-                          <p class="artcleList">小蠻腰科技大會即將隆重召開</p>
+                          <p class="artcleList">3小蠻腰科技大會即將隆重召開</p>
                         </a>
                       </li>
                       <li class="mui-table-view-cell">
                         <a class="mui-navigate-right" href="article.html">
-                          <p class="artcleList">協會組織前往台灣政治大學金融科技研究協會組織前往台灣政治大學金融科技研究</p>
+                          <p class="artcleList">3協會組織前往台灣政治大學金融科技研究協會組織前往台灣政治大學金融科技研究</p>
                         </a>
                       </li>
                       <li class="mui-table-view-cell">
                         <a class="mui-navigate-right" href="article.html">
-                          <p class="artcleList">天河区推动台湾大学生实习和台湾青年创新创业</p>
+                          <p class="artcleList">3天河区推动台湾大学生实习和台湾青年创新创业</p>
                         </a>
                       </li>
                     </ul>
-                    <a class="more-btn" href="news_page.html">查看更多</a>
+                    <a class="more-btn">查看更多</a>
                   </div>
                 </div>
               </div>
@@ -144,6 +144,18 @@
 
       <script src="js/swiper.min.js"></script>
       <script src="js/style.js" type="text/javascript" charset="utf-8"></script>
+      <script type="text/javascript">
+        var btnObj = document.querySelectorAll('.more-btn');  
+        var ulObj = document.querySelectorAll('.article-ul')
+        for (let i = 0; i < btnObj.length; i++) {  
+          btnObj[i].onclick = function(e) {  
+            var index = Array.prototype.indexOf.call(btnObj, this);
+            var node=document.createElement("li");
+            var itm = ulObj[i].cloneNode(true);   
+            ulObj[i].appendChild(itm);
+          }  
+        }  
+      </script>
   </body>
 
 </html>
